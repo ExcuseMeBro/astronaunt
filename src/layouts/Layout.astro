@@ -7,6 +7,7 @@ const { title } = Astro.props;
 
 import i18next, { t } from "i18next";
 import { HeadHrefLangs } from "astro-i18next/components";
+import {Toaster} from "vue-sonner";
 ---
 
 <!DOCTYPE html>
@@ -21,6 +22,7 @@ import { HeadHrefLangs } from "astro-i18next/components";
 		<HeadHrefLangs />
 	</head>
 	<body>
+	<Toaster client:load richColors expand position="top-right"/>
 		<slot />
 	</body>
 </html>
