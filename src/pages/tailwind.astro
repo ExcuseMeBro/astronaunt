@@ -2,6 +2,7 @@
 import { changeLanguage } from "i18next";
 import Menu from "../components/vue/Menu.vue";
 import Select from "../components/vue/Select.vue";
+import InputMask from "../components/vue/InputMask.vue";
 import Layout from "../layouts/Layout.astro";
 
 changeLanguage("en");
@@ -11,6 +12,10 @@ const salutAstro = "Salut Astro!";
 
 <Layout title="Welcome to Tailwind Page">
   <Menu client:load />
+  <div>
+    <h3>INPUT MASK</h3>
+    <InputMask client:load/>
+  </div>
   <div class="flex items-center justify-center">
     <h1 class="text-3xl font-bold underline">
       {salutAstro}
