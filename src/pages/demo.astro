@@ -1,0 +1,27 @@
+---
+import { changeLanguage } from "i18next";
+import Menu from "../components/vue/Menu.vue";
+import InputMask from "../components/vue/InputMask.vue";
+import Sonner from "../components/vue/Sonner.vue";
+import Layout from "../layouts/Layout.astro";
+
+changeLanguage("en");
+
+const salutAstro = "Salut Astro!";
+---
+
+<Layout title="Welcome to Tailwind Page">
+  <Menu client:load />
+  <div class="flex items-center justify-center">
+    <h1 class="text-3xl font-bold">
+      {salutAstro}
+    </h1>
+  </div>
+  <div class="p-5 space-y-5">
+    <div>
+      <h3>INPUT MASK</h3>
+      <InputMask client:load/>
+    </div>
+    <Sonner client:load/>
+  </div>
+</Layout>
