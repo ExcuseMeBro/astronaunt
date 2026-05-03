@@ -12,7 +12,7 @@ Fast Astro starter for multilingual REST projects.
 - JWT helper utilities in `src/lib/auth.ts`
 - i18n dictionaries for English, Uzbek, and Russian
 - Lightweight Motion animations
-- CI + Dependabot + Bun audit
+- CI + Bun audit
 
 ## Quick start
 
