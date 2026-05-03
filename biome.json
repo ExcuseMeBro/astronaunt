@@ -6,7 +6,7 @@
 		"useIgnoreFile": true
 	},
 	"files": {
-		"includes": ["**", "!dist", "!.astro", "!node_modules", "!out", "!package-lock.json"],
+		"includes": ["**", "!dist", "!.astro", "!node_modules", "!bun.lock"],
 		"ignoreUnknown": false
 	},
 	"formatter": {

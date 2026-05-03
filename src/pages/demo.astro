@@ -1,4 +1,5 @@
 ---
+import AnimatedShowcase from "../components/vue/AnimatedShowcase.vue";
 import InputMask from "../components/vue/InputMask.vue";
 import Menu from "../components/vue/Menu.vue";
 import Sonner from "../components/vue/Sonner.vue";
@@ -27,6 +28,10 @@ const { text, raw } = useTranslations(locale);
 	<main class="mx-auto max-w-4xl px-6 py-12">
 		<section class="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm dark:border-slate-800 dark:bg-slate-900">
 			<h1 class="text-4xl font-black tracking-tight">{text("demo.title")}</h1>
+			<div class="mt-8 space-y-3">
+				<h2 class="text-sm font-bold uppercase tracking-[0.2em] text-slate-500">{text("demo.animationTitle")}</h2>
+				<AnimatedShowcase client:visible ariaLabel={text("demo.animationAriaLabel")} cards={raw("demo.animationCards")} />
+			</div>
 			<div class="mt-8 grid gap-8 md:grid-cols-2">
 				<div class="space-y-3">
 					<h2 class="text-sm font-bold uppercase tracking-[0.2em] text-slate-500">{text("demo.inputTitle")}</h2>

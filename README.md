@@ -6,19 +6,20 @@ Fast Astro starter for multilingual REST projects.
 
 - Astro 6 + Vue islands
 - Tailwind CSS 4 + DaisyUI
+- Bun package manager
 - Biome instead of ESLint/Prettier
 - REST API client in `src/lib/http.ts`
 - JWT helper utilities in `src/lib/auth.ts`
 - i18n dictionaries for English, Uzbek, and Russian
-- Remotion video composition starter
-- CI + Dependabot + npm audit
+- Lightweight Motion animations
+- CI + Dependabot + Bun audit
 
 ## Quick start
 
 ```bash
-npm install
+bun install
 cp .env.example .env
-npm run dev
+bun run dev
 ```
 
 Open `http://localhost:3000`.
@@ -26,13 +27,13 @@ Open `http://localhost:3000`.
 ## Scripts
 
 ```bash
-npm run dev       # local dev server
-npm run build     # production build
-npm run preview   # preview build
-npm run check     # Biome lint + format check
-npm run format    # format files
-npm run audit     # security audit
-npm run validate  # check + typecheck + build + audit
+bun run dev       # local dev server
+bun run build     # production build
+bun run preview   # preview build
+bun run check     # Biome lint + format check
+bun run format    # format files
+bun run audit     # security audit
+bun run validate  # check + typecheck + build + audit
 ```
 
 ## REST + JWT
@@ -64,22 +65,22 @@ Routes:
 - Uzbek: `/uz`, `/uz/demo`
 - Russian: `/ru`, `/ru/demo`
 
-## Remotion
+## Animation
 
-```bash
-npm run video:studio
-npm run video:render
+Lightweight Motion example lives in:
+
+```txt
+src/components/vue/AnimatedShowcase.vue
 ```
 
-Composition entry: `src/remotion/Root.tsx`.
+It runs as a Vue island with `client:visible`, so animation JavaScript loads only when needed.
 
 ## Quality gate
 
 Before deploy:
 
 ```bash
-npm run audit
-npm run validate
+bun run validate
 ```
 
 No GraphQL setup included. REST-first by default.

@@ -1,7 +1,7 @@
 {
 	"site": {
 		"title": "Astronaunt Starter",
-		"description": "A fast Astro starter with Vue islands, Tailwind, Biome, REST helpers, JWT-ready auth utilities, i18n, and Remotion animations."
+		"description": "A fast Astro starter with Vue islands, Tailwind, Biome, REST helpers, JWT-ready auth utilities, i18n, and lightweight Motion animations."
 	},
 	"home": {
 		"metaTitle": "Astronaunt Starter — Astro, Vue, REST, i18n",
@@ -9,7 +9,7 @@
 		"subtitleLead": "Production-friendly starter for",
 		"subtitleStrong": "REST APIs",
 		"subtitleMiddle": "with JWT-ready auth helpers, i18n, Biome quality checks, and",
-		"subtitleLink": "Remotion video support",
+		"subtitleLink": "lightweight Motion animations",
 		"subtitleEnd": ".",
 		"ctaPrimary": "Open demo",
 		"ctaSecondary": "Read README",
@@ -25,9 +25,9 @@
 				"body": "One tool for linting, formatting, import sorting, and CI checks."
 			},
 			{
-				"href": "https://www.remotion.dev/",
-				"title": "Remotion ready",
-				"body": "React-based video compositions for product promos and animations."
+				"href": "https://motion.dev/",
+				"title": "Motion ready",
+				"body": "Lightweight animations for page reveals and micro-interactions."
 			},
 			{
 				"href": "https://developer.mozilla.org/en-US/docs/Web/HTTP",
@@ -64,6 +64,22 @@
 			"successMessage": "Saved successfully.",
 			"warningMessage": "Please check required fields.",
 			"errorMessage": "Something went wrong. Try again."
-		}
+		},
+		"animationTitle": "Lightweight animations",
+		"animationAriaLabel": "Lightweight animation showcase",
+		"animationCards": [
+			{
+				"title": "Tiny runtime",
+				"body": "Motion loads only on this island."
+			},
+			{
+				"title": "Progressive",
+				"body": "No-JS fallback stays readable."
+			},
+			{
+				"title": "Fast UI",
+				"body": "Great for page transitions and micro-interactions."
+			}
+		]
 	}
 }

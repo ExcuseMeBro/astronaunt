@@ -1,7 +1,7 @@
 {
 	"site": {
 		"title": "Astronaunt Starter",
-		"description": "Быстрый Astro-стартер с Vue islands, Tailwind, Biome, REST-хелперами, JWT-ready auth утилитами, i18n и анимациями Remotion."
+		"description": "Быстрый Astro-стартер с Vue islands, Tailwind, Biome, REST-хелперами, JWT-ready auth утилитами, i18n и лёгкими анимациями Motion."
 	},
 	"home": {
 		"metaTitle": "Astronaunt Starter — Astro, Vue, REST, i18n",
@@ -9,7 +9,7 @@
 		"subtitleLead": "Production-friendly стартер для",
 		"subtitleStrong": "REST API",
 		"subtitleMiddle": "с JWT-ready auth хелперами, i18n, проверками качества Biome и",
-		"subtitleLink": "поддержкой видео Remotion",
+		"subtitleLink": "лёгкими анимациями Motion",
 		"subtitleEnd": ".",
 		"ctaPrimary": "Открыть демо",
 		"ctaSecondary": "Читать README",
@@ -25,9 +25,9 @@
 				"body": "Один инструмент для lint, format, сортировки import и CI-проверок."
 			},
 			{
-				"href": "https://www.remotion.dev/",
-				"title": "Remotion готов",
-				"body": "React-based video compositions для product promo и анимаций."
+				"href": "https://motion.dev/",
+				"title": "Motion готов",
+				"body": "Лёгкие анимации для появления страниц и micro-interactions."
 			},
 			{
 				"href": "https://developer.mozilla.org/en-US/docs/Web/HTTP",
@@ -64,6 +64,22 @@
 			"successMessage": "Успешно сохранено.",
 			"warningMessage": "Проверьте обязательные поля.",
 			"errorMessage": "Что-то пошло не так. Попробуйте ещё раз."
-		}
+		},
+		"animationTitle": "Лёгкие анимации",
+		"animationAriaLabel": "Демо лёгких анимаций",
+		"animationCards": [
+			{
+				"title": "Маленький runtime",
+				"body": "Motion загружается только в этом island."
+			},
+			{
+				"title": "Progressive",
+				"body": "Fallback без JavaScript остаётся читаемым."
+			},
+			{
+				"title": "Быстрый UI",
+				"body": "Подходит для page transitions и micro-interactions."
+			}
+		]
 	}
 }

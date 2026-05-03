@@ -1,7 +1,7 @@
 {
 	"site": {
 		"title": "Astronaunt Starter",
-		"description": "Vue islandlar, Tailwind, Biome, REST yordamchilari, JWT auth utilitalari, i18n va Remotion animatsiyalari bor tezkor Astro starter."
+		"description": "Vue islandlar, Tailwind, Biome, REST yordamchilari, JWT auth utilitalari, i18n va yengil Motion animatsiyalari bor tezkor Astro starter."
 	},
 	"home": {
 		"metaTitle": "Astronaunt Starter — Astro, Vue, REST, i18n",
@@ -9,7 +9,7 @@
 		"subtitleLead": "Starter productionga tayyor loyihalar uchun mos:",
 		"subtitleStrong": "REST API",
 		"subtitleMiddle": "JWT auth yordamchilari, i18n, Biome sifat tekshiruvlari va",
-		"subtitleLink": "Remotion video qo‘llab-quvvatlovi",
+		"subtitleLink": "yengil Motion animatsiyalari",
 		"subtitleEnd": ".",
 		"ctaPrimary": "Demoni ochish",
 		"ctaSecondary": "README o‘qish",
@@ -25,9 +25,9 @@
 				"body": "Lint, format, import tartiblash va CI tekshiruvlari uchun bitta vosita."
 			},
 			{
-				"href": "https://www.remotion.dev/",
-				"title": "Remotion tayyor",
-				"body": "Mahsulot promo roliklari va animatsiyalar uchun React asosidagi video kompozitsiyalar."
+				"href": "https://motion.dev/",
+				"title": "Motion tayyor",
+				"body": "Sahifa reveal va micro-interactionlar uchun yengil animatsiyalar."
 			},
 			{
 				"href": "https://developer.mozilla.org/en-US/docs/Web/HTTP",
@@ -64,6 +64,22 @@
 			"successMessage": "Muvaffaqiyatli saqlandi.",
 			"warningMessage": "Majburiy maydonlarni tekshiring.",
 			"errorMessage": "Xatolik yuz berdi. Qayta urinib ko‘ring."
-		}
+		},
+		"animationTitle": "Yengil animatsiyalar",
+		"animationAriaLabel": "Yengil animatsiyalar namunasi",
+		"animationCards": [
+			{
+				"title": "Kichik runtime",
+				"body": "Motion faqat shu islandda yuklanadi."
+			},
+			{
+				"title": "Progressive",
+				"body": "JavaScriptsiz fallback ham o‘qiladi."
+			},
+			{
+				"title": "Tez UI",
+				"body": "Page transition va micro-interactionlar uchun mos."
+			}
+		]
 	}
 }

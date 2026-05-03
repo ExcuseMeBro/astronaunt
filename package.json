@@ -3,21 +3,19 @@
 	"type": "module",
 	"version": "0.1.0",
 	"private": true,
-	"packageManager": "npm@11.6.2",
+	"packageManager": "bun@1.3.8",
 	"scripts": {
 		"dev": "astro dev",
 		"start": "astro dev",
 		"build": "astro build",
 		"preview": "astro preview",
 		"astro": "astro",
-		"lint": "biome lint astro.config.mjs biome.json package.json tsconfig.json src/i18n src/lib src/remotion",
-		"format": "biome format --write astro.config.mjs biome.json package.json tsconfig.json src/i18n src/lib src/remotion",
-		"check": "biome check astro.config.mjs biome.json package.json tsconfig.json src/i18n src/lib src/remotion",
+		"lint": "biome lint astro.config.mjs biome.json package.json tsconfig.json src/i18n src/lib",
+		"format": "biome format --write astro.config.mjs biome.json package.json tsconfig.json src/i18n src/lib",
+		"check": "biome check astro.config.mjs biome.json package.json tsconfig.json src/i18n src/lib",
 		"typecheck": "tsc --noEmit --pretty false",
-		"audit": "npm audit --audit-level=moderate",
-		"validate": "npm run check && npm run typecheck && npm run build && npm run audit",
-		"video:studio": "remotion studio src/remotion/Root.tsx",
-		"video:render": "remotion render src/remotion/Root.tsx astronaut-intro out/astronaut-intro.mp4"
+		"audit": "bun audit --audit-level=moderate",
+		"validate": "bun run check && bun run typecheck && bun run build && bun run audit"
 	},
 	"dependencies": {
 		"@astrojs/vue": "^6.0.1",
@@ -25,19 +23,14 @@
 		"astro": "^6.2.1",
 		"daisyui": "^5.5.19",
 		"maska": "^3.2.0",
-		"react": "^19.2.1",
-		"react-dom": "^19.2.1",
-		"remotion": "^4.0.456",
+		"motion": "^12.38.0",
 		"tailwindcss": "^4.2.4",
 		"vue": "^3.5.33",
 		"vue-sonner": "^2.0.9"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^2.4.14",
-		"@remotion/cli": "^4.0.456",
 		"@types/node": "^24.10.1",
-		"@types/react": "^19.2.7",
-		"@types/react-dom": "^19.2.3",
 		"typescript": "^5.9.3"
 	}
 }
