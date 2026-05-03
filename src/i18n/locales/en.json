@@ -1,0 +1,69 @@
+{
+	"site": {
+		"title": "Astronaunt Starter",
+		"description": "A fast Astro starter with Vue islands, Tailwind, Biome, REST helpers, JWT-ready auth utilities, i18n, and Remotion animations."
+	},
+	"home": {
+		"metaTitle": "Astronaunt Starter — Astro, Vue, REST, i18n",
+		"title": "Build fast multilingual Astro apps",
+		"subtitleLead": "Production-friendly starter for",
+		"subtitleStrong": "REST APIs",
+		"subtitleMiddle": "with JWT-ready auth helpers, i18n, Biome quality checks, and",
+		"subtitleLink": "Remotion video support",
+		"subtitleEnd": ".",
+		"ctaPrimary": "Open demo",
+		"ctaSecondary": "Read README",
+		"cards": [
+			{
+				"href": "https://docs.astro.build/",
+				"title": "Astro foundation",
+				"body": "Static-first pages, small client JavaScript, and fast builds."
+			},
+			{
+				"href": "https://biomejs.dev/",
+				"title": "Biome quality",
+				"body": "One tool for linting, formatting, import sorting, and CI checks."
+			},
+			{
+				"href": "https://www.remotion.dev/",
+				"title": "Remotion ready",
+				"body": "React-based video compositions for product promos and animations."
+			},
+			{
+				"href": "https://developer.mozilla.org/en-US/docs/Web/HTTP",
+				"title": "REST first",
+				"body": "Typed fetch client for JSON APIs; no GraphQL dependency or setup."
+			}
+		]
+	},
+	"demo": {
+		"metaTitle": "Demo — Astronaunt Starter",
+		"title": "Interactive Vue island demo",
+		"brand": "Astronaunt",
+		"inputTitle": "Input mask",
+		"toastsTitle": "Toasts",
+		"showToast": "Show toast",
+		"toastMessage": "Action completed successfully.",
+		"menu": {
+			"home": "Home",
+			"demo": "Demo",
+			"docs": "Docs",
+			"search": "Search",
+			"notifications": "Notifications"
+		},
+		"theme": {
+			"light": "Light",
+			"dark": "Dark"
+		},
+		"toasts": {
+			"info": "Info",
+			"success": "Success",
+			"warning": "Warning",
+			"error": "Error",
+			"infoMessage": "Useful information is ready.",
+			"successMessage": "Saved successfully.",
+			"warningMessage": "Please check required fields.",
+			"errorMessage": "Something went wrong. Try again."
+		}
+	}
+}

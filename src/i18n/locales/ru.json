@@ -1,0 +1,69 @@
+{
+	"site": {
+		"title": "Astronaunt Starter",
+		"description": "Быстрый Astro-стартер с Vue islands, Tailwind, Biome, REST-хелперами, JWT-ready auth утилитами, i18n и анимациями Remotion."
+	},
+	"home": {
+		"metaTitle": "Astronaunt Starter — Astro, Vue, REST, i18n",
+		"title": "Создавайте быстрые мультиязычные Astro-приложения",
+		"subtitleLead": "Production-friendly стартер для",
+		"subtitleStrong": "REST API",
+		"subtitleMiddle": "с JWT-ready auth хелперами, i18n, проверками качества Biome и",
+		"subtitleLink": "поддержкой видео Remotion",
+		"subtitleEnd": ".",
+		"ctaPrimary": "Открыть демо",
+		"ctaSecondary": "Читать README",
+		"cards": [
+			{
+				"href": "https://docs.astro.build/",
+				"title": "Основа Astro",
+				"body": "Static-first страницы, минимум клиентского JavaScript и быстрые сборки."
+			},
+			{
+				"href": "https://biomejs.dev/",
+				"title": "Качество с Biome",
+				"body": "Один инструмент для lint, format, сортировки import и CI-проверок."
+			},
+			{
+				"href": "https://www.remotion.dev/",
+				"title": "Remotion готов",
+				"body": "React-based video compositions для product promo и анимаций."
+			},
+			{
+				"href": "https://developer.mozilla.org/en-US/docs/Web/HTTP",
+				"title": "REST first",
+				"body": "Typed fetch client для JSON API; GraphQL dependency и setup не нужны."
+			}
+		]
+	},
+	"demo": {
+		"metaTitle": "Демо — Astronaunt Starter",
+		"title": "Интерактивное демо Vue island",
+		"brand": "Astronaunt",
+		"inputTitle": "Input mask",
+		"toastsTitle": "Toast-уведомления",
+		"showToast": "Показать toast",
+		"toastMessage": "Действие успешно выполнено.",
+		"menu": {
+			"home": "Главная",
+			"demo": "Демо",
+			"docs": "Документация",
+			"search": "Поиск",
+			"notifications": "Уведомления"
+		},
+		"theme": {
+			"light": "Светлая",
+			"dark": "Тёмная"
+		},
+		"toasts": {
+			"info": "Инфо",
+			"success": "Успех",
+			"warning": "Внимание",
+			"error": "Ошибка",
+			"infoMessage": "Полезная информация готова.",
+			"successMessage": "Успешно сохранено.",
+			"warningMessage": "Проверьте обязательные поля.",
+			"errorMessage": "Что-то пошло не так. Попробуйте ещё раз."
+		}
+	}
+}

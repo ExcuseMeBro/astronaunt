@@ -1,12 +1,14 @@
-import { defineConfig } from 'astro/config';
-import tailwind from "@astrojs/tailwind";
-import astroI18next from "astro-i18next";
 import vue from "@astrojs/vue";
+import tailwindcss from "@tailwindcss/vite";
+import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), astroI18next(), vue()],
-  server: {
-    port: 3000
-  }
+	integrations: [vue()],
+	vite: {
+		plugins: [tailwindcss()],
+	},
+	server: {
+		port: 3000,
+	},
 });

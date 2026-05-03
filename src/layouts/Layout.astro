@@ -1,28 +1,48 @@
 ---
+import { Toaster } from "vue-sonner";
+import { defaultLocale, getAlternateLinks, type Locale } from "../i18n";
+import "../styles/global.css";
+
 export interface Props {
 	title: string;
+	description?: string;
+	locale?: Locale;
+	path?: string;
+	enableToaster?: boolean;
 }
 
-const { title } = Astro.props;
-
-import i18next, { t } from "i18next";
-import { HeadHrefLangs } from "astro-i18next/components";
-import {Toaster} from "vue-sonner";
+const {
+	title,
+	description = "",
+	locale = defaultLocale,
+	path = Astro.url.pathname,
+	enableToaster = false,
+} = Astro.props;
+const alternateLinks = getAlternateLinks(path).map(({ locale: hrefLang, href }) => ({
+	hrefLang,
+	href: new URL(href, Astro.url.origin).href,
+}));
+const canonicalUrl = new URL(path, Astro.url.origin);
 ---
 
-<!DOCTYPE html>
-<html lang={i18next.language}>
+<!doctype html>
+<html lang={locale}>
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content={t("site.description")}>
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content={description} />
+		<meta name="referrer" content="strict-origin-when-cross-origin" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="canonical" href={canonicalUrl.href} />
+		{alternateLinks.map(({ hrefLang, href }) => <link rel="alternate" hreflang={hrefLang} href={href} />)}
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:type" content="website" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{t("site.title")}</title>
-		<HeadHrefLangs />
+		<title>{title}</title>
 	</head>
 	<body>
-		<Toaster client:load richColors expand position="top-right"/>
+		{enableToaster ? <Toaster client:idle richColors expand position="top-right" /> : null}
 		<slot />
 	</body>
 </html>

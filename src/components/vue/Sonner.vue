@@ -1,19 +1,49 @@
 <script setup lang="ts">
-import { markRaw } from 'vue'
-import {toast} from "vue-sonner";
-import Toast from "./Taost/Toast.vue";
+import { toast } from "vue-sonner";
+
+type ToastLabels = {
+	info: string;
+	success: string;
+	warning: string;
+	error: string;
+	infoMessage: string;
+	successMessage: string;
+	warningMessage: string;
+	errorMessage: string;
+};
+
+const props = withDefaults(
+	defineProps<{
+		labels?: ToastLabels;
+	}>(),
+	{
+		labels: () => ({
+			info: "Info",
+			success: "Success",
+			warning: "Warning",
+			error: "Error",
+			infoMessage: "Useful information is ready.",
+			successMessage: "Saved successfully.",
+			warningMessage: "Please check required fields.",
+			errorMessage: "Something went wrong. Try again.",
+		}),
+	},
+);
 </script>
 
 <template>
-  <div class="space-x-3">
-    <button @click="toast.custom(markRaw(Toast))" class="btn btn-info">Custom</button>
-    <button @click="toast.info('Hello World!')" class="btn btn-info">Info</button>
-    <button @click="toast.success('Hello World!')" class="btn btn-success">Success</button>
-    <button @click="toast.warning('Hello World!')" class="btn btn-warning">Warning</button>
-    <button @click="toast.error('Hello World!')" class="btn btn-error">Error</button>
-  </div>
+	<div class="flex flex-wrap gap-3">
+		<button type="button" @click="toast.info(props.labels.infoMessage)" class="btn btn-info">
+			{{ props.labels.info }}
+		</button>
+		<button type="button" @click="toast.success(props.labels.successMessage)" class="btn btn-success">
+			{{ props.labels.success }}
+		</button>
+		<button type="button" @click="toast.warning(props.labels.warningMessage)" class="btn btn-warning">
+			{{ props.labels.warning }}
+		</button>
+		<button type="button" @click="toast.error(props.labels.errorMessage)" class="btn btn-error">
+			{{ props.labels.error }}
+		</button>
+	</div>
 </template>
-
-<style scoped>
-
-</style>

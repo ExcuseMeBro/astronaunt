@@ -1,0 +1,69 @@
+{
+	"site": {
+		"title": "Astronaunt Starter",
+		"description": "Vue islandlar, Tailwind, Biome, REST yordamchilari, JWT auth utilitalari, i18n va Remotion animatsiyalari bor tezkor Astro starter."
+	},
+	"home": {
+		"metaTitle": "Astronaunt Starter — Astro, Vue, REST, i18n",
+		"title": "Tez va ko‘p tilli Astro ilovalar yarating",
+		"subtitleLead": "Starter productionga tayyor loyihalar uchun mos:",
+		"subtitleStrong": "REST API",
+		"subtitleMiddle": "JWT auth yordamchilari, i18n, Biome sifat tekshiruvlari va",
+		"subtitleLink": "Remotion video qo‘llab-quvvatlovi",
+		"subtitleEnd": ".",
+		"ctaPrimary": "Demoni ochish",
+		"ctaSecondary": "README o‘qish",
+		"cards": [
+			{
+				"href": "https://docs.astro.build/",
+				"title": "Astro asos",
+				"body": "Static-first sahifalar, kam client JavaScript va tez build."
+			},
+			{
+				"href": "https://biomejs.dev/",
+				"title": "Biome sifati",
+				"body": "Lint, format, import tartiblash va CI tekshiruvlari uchun bitta vosita."
+			},
+			{
+				"href": "https://www.remotion.dev/",
+				"title": "Remotion tayyor",
+				"body": "Mahsulot promo roliklari va animatsiyalar uchun React asosidagi video kompozitsiyalar."
+			},
+			{
+				"href": "https://developer.mozilla.org/en-US/docs/Web/HTTP",
+				"title": "REST birinchi",
+				"body": "JSON APIlar uchun typed fetch client; GraphQL dependency yoki setup yo‘q."
+			}
+		]
+	},
+	"demo": {
+		"metaTitle": "Demo — Astronaunt Starter",
+		"title": "Interaktiv Vue island demo",
+		"brand": "Astronaunt",
+		"inputTitle": "Input maskasi",
+		"toastsTitle": "Toastlar",
+		"showToast": "Toast ko‘rsatish",
+		"toastMessage": "Amal muvaffaqiyatli bajarildi.",
+		"menu": {
+			"home": "Bosh sahifa",
+			"demo": "Demo",
+			"docs": "Hujjatlar",
+			"search": "Qidirish",
+			"notifications": "Bildirishnomalar"
+		},
+		"theme": {
+			"light": "Yorug‘",
+			"dark": "Tungi"
+		},
+		"toasts": {
+			"info": "Info",
+			"success": "Muvaffaqiyat",
+			"warning": "Ogohlantirish",
+			"error": "Xato",
+			"infoMessage": "Foydali ma’lumot tayyor.",
+			"successMessage": "Muvaffaqiyatli saqlandi.",
+			"warningMessage": "Majburiy maydonlarni tekshiring.",
+			"errorMessage": "Xatolik yuz berdi. Qayta urinib ko‘ring."
+		}
+	}
+}

@@ -1,26 +1,43 @@
 {
-  "name": "regular-ring",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@astrojs/tailwind": "^5.1.0",
-    "@astrojs/vue": "^4.0.9",
-    "@biomejs/biome": "1.6.2",
-    "astro": "^4.5.9",
-    "astro-i18next": "^1.0.0-beta.21",
-    "maska": "^2.1.11",
-    "tailwindcss": "^3.4.1",
-    "vue": "^3.4.21",
-    "vue-sonner": "^1.1.2"
-  },
-  "devDependencies": {
-    "daisyui": "^4.7.3"
-  }
+	"name": "astronaunt",
+	"type": "module",
+	"version": "0.1.0",
+	"private": true,
+	"packageManager": "npm@11.6.2",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro",
+		"lint": "biome lint astro.config.mjs biome.json package.json tsconfig.json src/i18n src/lib src/remotion",
+		"format": "biome format --write astro.config.mjs biome.json package.json tsconfig.json src/i18n src/lib src/remotion",
+		"check": "biome check astro.config.mjs biome.json package.json tsconfig.json src/i18n src/lib src/remotion",
+		"typecheck": "tsc --noEmit --pretty false",
+		"audit": "npm audit --audit-level=moderate",
+		"validate": "npm run check && npm run typecheck && npm run build && npm run audit",
+		"video:studio": "remotion studio src/remotion/Root.tsx",
+		"video:render": "remotion render src/remotion/Root.tsx astronaut-intro out/astronaut-intro.mp4"
+	},
+	"dependencies": {
+		"@astrojs/vue": "^6.0.1",
+		"@tailwindcss/vite": "^4.1.17",
+		"astro": "^6.2.1",
+		"daisyui": "^5.5.19",
+		"maska": "^3.2.0",
+		"react": "^19.2.1",
+		"react-dom": "^19.2.1",
+		"remotion": "^4.0.456",
+		"tailwindcss": "^4.2.4",
+		"vue": "^3.5.33",
+		"vue-sonner": "^2.0.9"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.4.14",
+		"@remotion/cli": "^4.0.456",
+		"@types/node": "^24.10.1",
+		"@types/react": "^19.2.7",
+		"@types/react-dom": "^19.2.3",
+		"typescript": "^5.9.3"
+	}
 }

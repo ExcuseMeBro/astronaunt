@@ -1,88 +1,43 @@
 ---
-import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
-import { t, changeLanguage } from "i18next";
-import { Trans } from "astro-i18next/components";
+import { localizePath, type Locale, useTranslations } from "../i18n";
+import Layout from "../layouts/Layout.astro";
 
-changeLanguage("en");
+type HomeCard = {
+	href: string;
+	title: string;
+	body: string;
+};
+
+const locale: Locale = "en";
+const { text, raw } = useTranslations(locale);
+const cards = raw<HomeCard[]>("home.cards", []);
 ---
 
-<Layout title={t("home.title")}>
-	<main>
-		<h1>{t("home.title")}</h1>
-		<p>
-			<Trans i18nKey="home.subtitle">
-				This is a <em>more complex</em> string to translate, mixed with <strong
-			>html elements
-			</strong> such as <a href="https://example.com/">a cool link</a>!
-			</Trans>
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
+<Layout
+	title={text("home.metaTitle")}
+	description={text("site.description")}
+	locale={locale}
+	path="/"
+>
+	<main class="mx-auto flex min-h-screen max-w-5xl flex-col justify-center px-6 py-16">
+		<section class="max-w-3xl space-y-6">
+			<p class="text-sm font-semibold uppercase tracking-[0.3em] text-violet-600">{text("site.title")}</p>
+			<h1 class="text-5xl font-black tracking-tight text-slate-950 sm:text-7xl dark:text-white">
+				{text("home.title")}
+			</h1>
+			<p class="text-lg leading-8 text-slate-700 dark:text-slate-300">
+				{text("home.subtitleLead")} <strong>{text("home.subtitleStrong")}</strong>{" "}
+				{text("home.subtitleMiddle")} <a class="font-semibold text-violet-600 underline underline-offset-4" href="https://www.remotion.dev/">{text("home.subtitleLink")}</a>{text("home.subtitleEnd")}
+			</p>
+			<div class="flex flex-wrap gap-3">
+				<a class="btn btn-primary" href={localizePath(locale, "/demo")}>{text("home.ctaPrimary")}</a>
+				<a class="btn btn-outline" href="https://github.com/ExcuseMeBro/astronaunt#readme">{text("home.ctaSecondary")}</a>
+			</div>
+		</section>
+
+		<ul role="list" class="mt-12 grid gap-4 p-0 sm:grid-cols-2">
+			{cards.map((card) => <Card {...card} />)}
 		</ul>
 	</main>
 </Layout>
-
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>

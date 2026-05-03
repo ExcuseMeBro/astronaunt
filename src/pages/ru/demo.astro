@@ -5,7 +5,7 @@ import Sonner from "../../components/vue/Sonner.vue";
 import { localizePath, type Locale, useTranslations } from "../../i18n";
 import Layout from "../../layouts/Layout.astro";
 
-const locale: Locale = "uz";
+const locale: Locale = "ru";
 const { text, raw } = useTranslations(locale);
 ---
 
@@ -13,7 +13,7 @@ const { text, raw } = useTranslations(locale);
 	title={text("demo.metaTitle")}
 	description={text("site.description")}
 	locale={locale}
-	path="/uz/demo"
+	path="/ru/demo"
 	enableToaster
 >
 	<Menu

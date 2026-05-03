@@ -1,27 +1,46 @@
 ---
-import { changeLanguage } from "i18next";
-import Menu from "../components/vue/Menu.vue";
 import InputMask from "../components/vue/InputMask.vue";
+import Menu from "../components/vue/Menu.vue";
 import Sonner from "../components/vue/Sonner.vue";
+import { localizePath, type Locale, useTranslations } from "../i18n";
 import Layout from "../layouts/Layout.astro";
 
-changeLanguage("en");
-
-const salutAstro = "Salut Astro!";
+const locale: Locale = "en";
+const { text, raw } = useTranslations(locale);
 ---
 
-<Layout title="Welcome to Tailwind Page">
-  <Menu client:load />
-  <div class="flex items-center justify-center">
-    <h1 class="text-3xl font-bold">
-      {salutAstro}
-    </h1>
-  </div>
-  <div class="p-5 space-y-5">
-    <div>
-      <h3>INPUT MASK</h3>
-      <InputMask client:load/>
-    </div>
-    <Sonner client:load/>
-  </div>
+<Layout
+	title={text("demo.metaTitle")}
+	description={text("site.description")}
+	locale={locale}
+	path="/demo"
+	enableToaster
+>
+	<Menu
+		client:idle
+		brand={text("demo.brand")}
+		labels={raw("demo.menu")}
+		themeLabels={raw("demo.theme")}
+		homeHref={localizePath(locale, "/")}
+		demoHref={localizePath(locale, "/demo")}
+	/>
+	<main class="mx-auto max-w-4xl px-6 py-12">
+		<section class="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+			<h1 class="text-4xl font-black tracking-tight">{text("demo.title")}</h1>
+			<div class="mt-8 grid gap-8 md:grid-cols-2">
+				<div class="space-y-3">
+					<h2 class="text-sm font-bold uppercase tracking-[0.2em] text-slate-500">{text("demo.inputTitle")}</h2>
+					<InputMask
+						client:visible
+						buttonLabel={text("demo.showToast")}
+						toastMessage={text("demo.toastMessage")}
+					/>
+				</div>
+				<div class="space-y-3">
+					<h2 class="text-sm font-bold uppercase tracking-[0.2em] text-slate-500">{text("demo.toastsTitle")}</h2>
+					<Sonner client:idle labels={raw("demo.toasts")} />
+				</div>
+			</div>
+		</section>
+	</main>
 </Layout>
